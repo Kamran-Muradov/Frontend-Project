@@ -21,7 +21,6 @@ navHeaders.forEach(navHeader => {
   });
 });
 
-
 navHeaders.forEach(navHeader => {
   navHeader.addEventListener("mouseleave", function () {
     for (const item of navSubmenus) {
@@ -34,24 +33,6 @@ navHeaders.forEach(navHeader => {
     }
   });
 });
-
-
-
-// firstNavElem.addEventListener("mouseover", function () {
-//   firstNavSubmenu.classList.add("active");
-// });
-
-// firstNavElem.addEventListener("mouseleave", function () {
-//   firstNavSubmenu.classList.remove("active");
-// });
-
-// firstNavSubmenu.addEventListener("mouseover", function () {
-//   this.classList.add("active");
-// });
-
-// firstNavSubmenu.addEventListener("mouseleave", function () {
-//   this.classList.remove("active");
-// });
 
 window.onscroll = function () {
   changeHeaderBackground();
@@ -66,3 +47,20 @@ function changeHeaderBackground() {
     searchInput.style.backgroundColor = "white";
   }
 }
+
+let tabHeaders = document.querySelectorAll("#all-courses .tab-headers ul li");
+let tabContents = document.querySelectorAll("#all-courses .tab-body .content");
+
+tabHeaders.forEach(header => {
+  header.addEventListener("click", function () {
+    document.querySelector(".active-tab").classList.remove("active-tab");
+    this.classList.add("active-tab");
+    for (const item of tabContents) {
+      if (item.getAttribute("data-id") == this.getAttribute("data-id")) {
+        item.classList.remove("d-none");
+      } else {
+        item.classList.add("d-none");
+      }
+    }
+  });
+});
