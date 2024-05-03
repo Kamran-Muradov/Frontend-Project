@@ -8,15 +8,17 @@ header {
         // top: 0;
         // width: 100%
         background-color: red;
-      }
+    }
 
-      position: sticky;
-      top: 0;
+    position: sticky;
+    top: 0;
     background-color: #edeef3;
+    z-index: 99;
     > .header-area {
         width: 91%;
         margin: auto;
         padding-top: 20px;
+        padding-bottom: 20px;
         > .row {
             > .col-md-3 {
                 > .header-left {
@@ -60,9 +62,46 @@ header {
                                         &:hover {
                                             color: #2b4eff;
                                         }
-                                        >i{
+                                        > i {
                                             font-size: 10px;
                                         }
+                                    }
+
+                                    > .home-submenu {
+                                        position: absolute;
+                                        left: 15%;
+                                        list-style: none;
+                                        margin: 0;
+                                        background-color: white;
+                                        width: 200px;
+                                        padding: 0;
+                                        transition: all 0.3s;
+                                        opacity: 0;
+                                        > li {
+                                            border-bottom: 1px solid #edeef3;
+                                            padding: 9px 20px;
+                                            background: linear-gradient(to left, white 50%, #2b4eff 50%) right;
+                                            background-size: 200%;
+                                            transition: 0.4s ease-out;
+                                            &:hover {
+                                                background-position: left;
+                                            }
+
+                                            &:hover .nav-item {
+                                                visibility: visible;
+                                            }
+
+                                            > a {
+                                                text-decoration: none;
+                                                color: black;
+                                            }
+                                        }
+                                        > li:last-of-type {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                    > .active {
+                                        opacity: 1;
                                     }
                                 }
                             }
@@ -75,10 +114,12 @@ header {
                             }
                             > img {
                                 height: 24px;
-                                width: 24px;
+                                width: 35px;
                                 cursor: pointer;
                                 position: relative;
-                                right: 45px;
+                                right: 55px;
+                                border-left: 2px solid gray;
+                                padding-left: 10px;
                             }
                             > input {
                                 width: 280px;
@@ -86,6 +127,7 @@ header {
                                 border: 1px solid white;
                                 border-radius: 4px;
                                 padding-left: 46px;
+                                padding-right: 55px;
                                 outline: none;
                                 transition: all 0.3s;
                                 &:focus {
@@ -99,7 +141,7 @@ header {
                                 padding: 0px 7px;
                                 color: white;
                                 position: relative;
-                                right: 63px;
+                                right: 70px;
                                 top: -11px;
                             }
                         }
@@ -120,50 +162,122 @@ header {
                 }
             }
         }
-        > .home-submenu {
-            position: absolute;
-            left: 38%;
-            list-style: none;
-            margin: 0;
-            background-color: white;
-            width: 200px;
-            padding: 0;
-            transition: all 0.3s;
-            opacity: 0;;
-            > li {
-                border-bottom: 1px solid #edeef3;
-                padding: 9px 20px;
-                background: linear-gradient(to left, white 50%, #2b4eff 50%) right;
-                background-size: 200%;
-                transition: 0.4s ease-out;
-                &:hover {
-                    background-position: left;
-                }
-
-                &:hover .nav-item{
-                    visibility: visible;
-                }
-
-                > a {
-                    text-decoration: none;
-                    color: black;
-                }
-            }
-            > li:last-of-type {
-                border-bottom: none;
-            }
-        }
-        >.active{
-            opacity: 1;
-        }
     }
 }
 
-#banner{
-    height: 1500px;
+#banner {
+    padding-top: 10rem;
+    // height: 1500px;
     background-color: #edeef3;
-    >.img{
-        
+    > img:first-of-type {
+        position: absolute;
+        top: 25%;
+        left: 7%;
+    }
+
+    > img:nth-of-type(2) {
+        position: absolute;
+        bottom: 5%;
+    }
+
+    > img:nth-of-type(3) {
+        position: absolute;
+        right: 17%;
+        bottom: 35%;
+    }
+
+    > img:nth-of-type(4) {
+        max-width: 200px;
+        max-height: 240px;
+        border-radius: 4px 40px;
+        margin-top: 50px;
+        position: absolute;
+        right: 120px;
+        z-index: 1;
+    }
+
+    >img:nth-of-type(5){
+        position: absolute;
+        right: 0px;
+        bottom: 10rem;
+    }
+
+    > .custom-container {
+        max-width: 1200px;
+        margin: auto;
+        > .row {
+            > .col-md-6:first-child {
+                > .banner-left {
+                    > span {
+                        font-size: 60px;
+                    }
+                    > h1 {
+                        font-size: 60px;
+                        font-weight: 700;
+                        > span {
+                            > img {
+                                width: 193px;
+                                position: absolute;
+                                left: 150px;
+                                z-index: 0;
+                                bottom: 19.5rem;
+                            }
+                        }
+                    }
+
+                    > p {
+                        font-size: 22px;
+                        margin-bottom: 3rem;
+                    }
+
+                    > a {
+                        text-decoration: none;
+                        color: white;
+                        background-color: blue;
+                        border-radius: 4px;
+                        padding: 13px 28px;
+                        transition: all 0.3s;
+                        &:hover {
+                            box-shadow:
+                                rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                        }
+                    }
+                }
+            }
+            > .col-md-6:last-child {
+                > .banner-right {
+                    > img:first-child {
+                        max-width: 400px;
+                        max-height: 460px;
+                        border-radius: 40px 4px;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    > img:nth-of-type(2) {
+                        position: relative;
+                        right: 27rem;
+                        top: 8rem;
+                    }
+                    > img:nth-of-type(3) {
+                        position: relative;
+                        bottom: 18rem;
+                        left: 16rem;
+                    }
+                    > .slogan {
+                        padding: 15px 25px 20px;
+                        background: #ffffff;
+                        border-radius: 4px;
+                        width: 257px;
+                        height: 78px;
+                        position: absolute;
+                        z-index: 2;
+                        bottom: -40px;
+                        right: 15%;
+                    }
+                }
+            }
+        }
     }
 }
 
