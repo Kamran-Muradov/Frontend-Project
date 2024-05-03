@@ -2,6 +2,11 @@
   font-family: "Hind", sans-serif;
 }
 
+.custom-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -78,8 +83,8 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > .navbar-collaps
 header > .header-area > .row > .col-md-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .home-submenu > li:hover {
   background-position: left;
 }
-header > .header-area > .row > .col-md-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .home-submenu > li:hover .nav-item {
-  visibility: visible;
+header > .header-area > .row > .col-md-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .home-submenu > li:hover > a {
+  color: white;
 }
 header > .header-area > .row > .col-md-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .home-submenu > li > a {
   text-decoration: none;
@@ -156,7 +161,7 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #banner > img:nth-of-type(3) {
   position: absolute;
   right: 17%;
-  bottom: 35%;
+  bottom: 50%;
 }
 #banner > img:nth-of-type(4) {
   max-width: 200px;
@@ -171,10 +176,6 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   position: absolute;
   right: 0px;
   bottom: 10rem;
-}
-#banner > .custom-container {
-  max-width: 1200px;
-  margin: auto;
 }
 #banner > .custom-container > .row > .col-md-6:first-child > .banner-left > span {
   font-size: 60px;
@@ -226,10 +227,108 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   padding: 15px 25px 20px;
   background: #ffffff;
   border-radius: 4px;
-  width: 257px;
+  width: 260px;
   height: 78px;
   position: absolute;
   z-index: 2;
-  bottom: -40px;
+  bottom: 5rem;
   right: 15%;
+}
+#banner > .custom-container > .row > .col-md-6:last-child > .banner-right > .slogan > p {
+  font-weight: 600;
+}
+
+#popular-courses > .custom-container h2 {
+  font-size: 40px;
+  font-weight: 700;
+  width: 40%;
+}
+#popular-courses > .custom-container h2 > img {
+  width: 149px;
+  height: 16px;
+  position: relative;
+  left: 65px;
+  bottom: 32px;
+  z-index: -1;
+}
+#popular-courses > .custom-container .more-categories a {
+  text-decoration: none;
+  color: #6d6e75;
+  transition: all 0.3s;
+}
+#popular-courses > .custom-container .more-categories a:hover {
+  color: #2b4eff;
+}
+#popular-courses > .custom-container .course {
+  padding: 15px 40px;
+  border-radius: 6px;
+  border: 2px solid #eef0f6;
+  transition: all 0.5s;
+}
+#popular-courses > .custom-container .course > img {
+  width: 40px;
+  height: 40px;
+}
+#popular-courses > .custom-container .course > .course-name {
+  margin-left: 35px;
+}
+#popular-courses > .custom-container .course > .course-name > a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: black;
+}
+#popular-courses > .custom-container .course:hover {
+  background-color: #2b4eff;
+  border-color: #2b4eff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#popular-courses > .custom-container .course:hover > .course-name > a,
+#popular-courses > .custom-container .course:hover > .course-name span {
+  color: white;
+}
+#popular-courses > .custom-container .online-course {
+  height: 264px;
+  padding: 50px 40px;
+  border-radius: 4px;
+}
+#popular-courses > .custom-container .online-course > .course-name > span {
+  background-color: rgb(252, 67, 137);
+  padding: 0px 14px;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  display: inline-block;
+}
+#popular-courses > .custom-container .online-course > .course-name > a:first-of-type {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 26px;
+  font-weight: 700;
+}
+#popular-courses > .custom-container .online-course > .course-name > a:last-of-type {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  border-radius: 4px;
+  padding: 6px 24px;
+  transition: all 0.3s;
+}
+#popular-courses > .custom-container .online-course > .course-name > a:last-of-type:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#popular-courses > .custom-container .online-course-1 {
+  background-image: url("../images/banner-bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#popular-courses > .custom-container .online-course-2 {
+  background-image: url("../images/banner-bg-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=home.css.map */

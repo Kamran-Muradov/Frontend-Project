@@ -1,6 +1,11 @@
 * {
     font-family: "Hind", sans-serif;
 }
+
+.custom-container {
+    max-width: 1200px;
+    margin: auto;
+}
 //#2b4eff
 header {
     .sticky {
@@ -85,12 +90,10 @@ header {
                                             transition: 0.4s ease-out;
                                             &:hover {
                                                 background-position: left;
+                                                > a {
+                                                    color: white;
+                                                }
                                             }
-
-                                            &:hover .nav-item {
-                                                visibility: visible;
-                                            }
-
                                             > a {
                                                 text-decoration: none;
                                                 color: black;
@@ -167,6 +170,7 @@ header {
 
 #banner {
     padding-top: 10rem;
+    // max-height: 800px;
     // height: 1500px;
     background-color: #edeef3;
     > img:first-of-type {
@@ -183,7 +187,7 @@ header {
     > img:nth-of-type(3) {
         position: absolute;
         right: 17%;
-        bottom: 35%;
+        bottom: 50%;
     }
 
     > img:nth-of-type(4) {
@@ -196,15 +200,13 @@ header {
         z-index: 1;
     }
 
-    >img:nth-of-type(5){
+    > img:nth-of-type(5) {
         position: absolute;
         right: 0px;
         bottom: 10rem;
     }
 
     > .custom-container {
-        max-width: 1200px;
-        margin: auto;
         > .row {
             > .col-md-6:first-child {
                 > .banner-left {
@@ -268,15 +270,132 @@ header {
                         padding: 15px 25px 20px;
                         background: #ffffff;
                         border-radius: 4px;
-                        width: 257px;
+                        width: 260px;
                         height: 78px;
                         position: absolute;
                         z-index: 2;
-                        bottom: -40px;
+                        bottom: 5rem;
                         right: 15%;
+                        > p {
+                            font-weight: 600;
+                        }
                     }
                 }
             }
+        }
+    }
+}
+
+#popular-courses {
+    > .custom-container {
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            width: 40%;
+            > img {
+                width: 149px;
+                height: 16px;
+                position: relative;
+                left: 65px;
+                bottom: 32px;
+                z-index: -1;
+            }
+        }
+        .more-categories {
+            a {
+                text-decoration: none;
+                color: #6d6e75;
+                transition: all 0.3s;
+                &:hover {
+                    color: #2b4eff;
+                }
+            }
+        }
+
+        .course {
+            padding: 15px 40px;
+            border-radius: 6px;
+            border: 2px solid #eef0f6;
+            transition: all 0.5s;
+            > img {
+                width: 40px;
+                height: 40px;
+            }
+            > .course-name {
+                margin-left: 35px;
+                > a {
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 1;
+                    color: black;
+                }
+            }
+            &:hover {
+                background-color: #2b4eff;
+                border-color: #2b4eff;
+                box-shadow:
+                    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                > .course-name {
+                    > a,
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .online-course {
+            height: 264px;
+            padding: 50px 40px;
+            border-radius: 4px;
+            > .course-name {
+                > span {
+                    background-color: rgb(252, 67, 137);
+                    padding: 0px 14px;
+                    color: white;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    display: inline-block;
+                }
+                > a:first-of-type {
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 26px;
+                    font-weight: 700;
+                }
+
+                > a:last-of-type {
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: white;
+                    background-color: blue;
+                    border-radius: 4px;
+                    padding: 6px 24px;
+                    transition: all 0.3s;
+                    &:hover {
+                        box-shadow:
+                            rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                    }
+                }
+            }
+        }
+
+        .online-course-1 {
+            background-image: url("../images/banner-bg-1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .online-course-2 {
+            background-image: url("../images/banner-bg-2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     }
 }
