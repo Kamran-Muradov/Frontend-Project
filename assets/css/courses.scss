@@ -1,0 +1,336 @@
+* {
+    font-family: "Hind", sans-serif;
+}
+
+.custom-container {
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    z-index: 99;
+    > .header-area {
+        width: 91%;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        > .row {
+            > .col-md-3 {
+                > .header-left {
+                    > img {
+                        cursor: pointer;
+                    }
+                    > .categories {
+                        border-left: 1px solid rgb(191, 191, 191);
+                        padding-left: 25px;
+                        padding-top: 1px;
+                        line-height: 43px;
+                        > img {
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                            transition: all 0.3s;
+                            // &:hover {
+                            //     color: #2b4eff;
+                            // }
+                        }
+                        > span {
+                            color: white;
+                            font-weight: 500;
+                            padding-left: 5px;
+                            cursor: pointer;
+                            transition: all 0.3s;
+                            // &:hover {
+                            //     color: #2b4eff;
+                            // }
+                        }
+                    }
+                }
+            }
+            > .col-md-9 {
+                > .header-right {
+                    > nav {
+                        background: none !important;
+                        > .navbar-collapse {
+                            > .navbar-nav {
+                                margin-left: 150px;
+                                > .nav-item {
+                                    > .nav-link {
+                                        color: white;
+                                        transition: all 0.3s;
+                                        border-bottom: 1px solid white;
+                                        border-style: none;
+                                        &:hover {
+                                            border-style: solid;
+                                        }
+                                        > i {
+                                            font-size: 10px;
+                                        }
+                                    }
+
+                                    > .submenu {
+                                        position: absolute;
+                                        left: 15%;
+                                        list-style: none;
+                                        margin: 0;
+                                        background-color: white;
+                                        width: 200px;
+                                        padding: 0;
+                                        transition: all 0.3s;
+                                        opacity: 0;
+                                        > li {
+                                            border-bottom: 1px solid #edeef3;
+                                            padding: 9px 20px;
+                                            background: linear-gradient(to left, white 50%, #2b4eff 50%) right;
+                                            background-size: 200%;
+                                            transition: 0.4s ease-out;
+                                            &:hover {
+                                                background-position: left;
+                                                > a {
+                                                    color: white;
+                                                }
+                                            }
+                                            > a {
+                                                text-decoration: none;
+                                                color: black;
+                                            }
+                                        }
+                                        > li:last-of-type {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                    > .active {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        > .search-area {
+                            > i {
+                                position: relative;
+                                left: 34px;
+                                cursor: pointer;
+                            }
+                            > img {
+                                height: 24px;
+                                width: 35px;
+                                cursor: pointer;
+                                position: relative;
+                                right: 55px;
+                                border-left: 2px solid gray;
+                                padding-left: 10px;
+                            }
+                            > input {
+                                width: 280px;
+                                height: 50px;
+                                border: 1px solid white;
+                                border-radius: 4px;
+                                padding-left: 46px;
+                                padding-right: 55px;
+                                outline: none;
+                                transition: all 0.3s;
+                                &:focus {
+                                    border-color: #2b4eff !important;
+                                }
+                            }
+                            > sup {
+                                border-radius: 50%;
+                                font-size: 15px;
+                                background-color: #2b4eff;
+                                padding: 0px 8px;
+                                color: white;
+                                position: relative;
+                                right: 70px;
+                                top: -11px;
+                                transition: all 0.3s;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: black;
+                                }
+                            }
+                        }
+                        > a {
+                            text-decoration: none;
+                            color: white;
+                            background-color: #2b4eff;
+                            border-radius: 4px;
+                            padding: 13px 28px;
+                            transition: all 0.3s;
+                            &:hover {
+                                box-shadow:
+                                    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                                    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#title-area {
+    background-image: linear-gradient(rgba(4, 4, 49, 0.55),
+                       rgba(4, 4, 49, 0.55)), url("../images/page-title.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    .title {
+        position: relative;
+        top: 15rem;
+        > h3 {
+            font-size: 70px;
+            color: #fff;
+            line-height: 62px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+        > a {
+            text-decoration: none;
+            color: white;
+        }
+        > span:first-of-type {
+            font-size: 4px;
+            color: white;
+            margin-left: 8px;
+        }
+        > span:last-of-type {
+            margin-left: 8px;
+            color: white;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .custom-container {
+        padding: 0px 25px;
+    }
+    header{
+    position: sticky !important;
+    }
+    .header-area .header-left .categories {
+        display: none;
+    }
+
+    .header-area .header-right .search-area {
+        display: none;
+    }
+
+    .header-area .header-right .navbar {
+        margin-top: 20px !important;
+    }
+
+    // #banner {
+    //     padding-top: 0px !important;
+    // }
+
+    // #banner img:first-child {
+    //     top: 43% !important;
+    // }
+
+    // #banner img:nth-child(3) {
+    //     bottom: 0px !important;
+    // }
+
+    // #banner img:nth-of-type(4) {
+    //     display: none;
+    // }
+
+    // #banner .banner-left span:first-child {
+    //     font-size: 25px !important;
+    // }
+
+    // #banner .banner-left h1 {
+    //     font-size: 25px !important;
+    // }
+
+    // #banner .banner-left h1 img {
+    //     width: 75px !important;
+    //     position: relative !important;
+    //     right: 81% !important;
+    //     z-index: -1 !important;
+    //     bottom: 0px !important;
+    // }
+
+    // #banner .banner-left p {
+    //     position: relative !important;
+    // }
+
+    // #banner .banner-left a {
+    //     position: relative !important;
+    // }
+
+    // #banner .banner-right {
+    //     max-height: 700px !important;
+    // }
+
+    // #banner .banner-right img:first-of-type {
+    //     margin-top: 11% !important;
+    // }
+
+    // #banner .banner-right .slogan {
+    //     bottom: -20rem !important;
+    // }
+
+    // #popular-courses .section-head {
+    //     display: block !important;
+    // }
+
+    // #popular-courses .section-head h2 {
+    //     width: 100% !important;
+    // }
+
+    // #popular-courses .section-head h2 img {
+    //     left: 70px !important;
+    // }
+
+    // #popular-courses .online-course img {
+    //     display: none;
+    // }
+
+    // #all-courses .tab-headers ul {
+    //     display: block;
+    // }
+
+    // #events .events-area .event {
+    //     display: block !important;
+    // }
+
+    // #prices .tab-body {
+    //     padding: 0;
+    // }
+
+    footer .footer-top .footer-slogan{
+        padding: 40px 40px;
+    }
+
+    footer .footer-top .footer-slogan .slogan-area{
+        display: block !important;
+    }
+    footer .footer-top .footer-slogan .slogan-area h3{
+        font-size: 25px;
+        >br{
+            display: none !important;
+        }
+    }
+
+    footer .footer-top .footer-slogan .slogan-area a{
+        margin-top: 20px !important;
+    }
+
+    footer .footer-center .company{
+        padding-left: 0px !important;
+    }
+
+    footer .footer-center .subscribe-area .search-box input{
+        width: 100% !important;
+    }
+}

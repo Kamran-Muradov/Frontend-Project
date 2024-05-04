@@ -1,12 +1,7 @@
 "use strict";
 
 let navHeaders = document.querySelectorAll(".navbar-collapse .nav-item");
-let navSubmenus = document.querySelectorAll(".home-submenu");
-
-let firstNavElem = document.querySelector(
-  ".navbar-collapse .nav-item:first-child"
-);
-let firstNavSubmenu = document.querySelector(".home-submenu");
+let navSubmenus = document.querySelectorAll(".submenu");
 let headerElem = document.querySelector("header");
 let sticky = headerElem.offsetTop;
 let searchInput = document.querySelector(".search-area input");
