@@ -48,14 +48,15 @@ function changeHeaderBackground() {
   }
 }
 
-let tabHeaders = document.querySelectorAll("#all-courses .tab-headers ul li");
-let tabContents = document.querySelectorAll("#all-courses .tab-body .content");
+let courseTabHeaders = document.querySelectorAll("#all-courses .tab-headers ul li");
+let courseTabContents = document.querySelectorAll("#all-courses .tab-body .content");
 
-tabHeaders.forEach(header => {
+
+courseTabHeaders.forEach(header => {
   header.addEventListener("click", function () {
     document.querySelector(".active-tab").classList.remove("active-tab");
     this.classList.add("active-tab");
-    for (const item of tabContents) {
+    for (const item of courseTabContents) {
       if (item.getAttribute("data-id") == this.getAttribute("data-id")) {
         item.classList.remove("d-none");
       } else {
@@ -64,3 +65,21 @@ tabHeaders.forEach(header => {
     }
   });
 });
+
+let priceTabHeaders = document.querySelectorAll("#prices .tab-headers span");
+let priceTabContents = document.querySelectorAll("#prices .tab-body .content");
+
+priceTabHeaders.forEach(header => {
+  header.addEventListener("click", function () {
+    document.querySelector(".active-price-tab").classList.remove("active-price-tab");
+    this.classList.add("active-price-tab");
+    for (const item of priceTabContents) {
+      if (item.getAttribute("data-id") == this.getAttribute("data-id")) {
+        item.classList.remove("d-none");
+      } else {
+        item.classList.add("d-none");
+      }
+    }
+  });
+});
+

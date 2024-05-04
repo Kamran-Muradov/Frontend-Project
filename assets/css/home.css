@@ -5,6 +5,7 @@
 .custom-container {
   max-width: 1200px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 header {
@@ -144,7 +145,7 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > .search-area > 
 header > .header-area > .row > .col-md-9 > .header-right > nav > a {
   text-decoration: none;
   color: white;
-  background-color: blue;
+  background-color: #2b4eff;
   border-radius: 4px;
   padding: 13px 28px;
   transition: all 0.3s;
@@ -557,6 +558,7 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #events .events-area {
   background-image: url("../images/events-shape.png");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 #events .events-area > .event {
   padding: 28px 50px;
@@ -597,6 +599,304 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 }
 #events .events-area > .event > a:hover {
   color: #2b4eff;
+}
+
+#prices {
+  padding-bottom: 10rem;
+}
+#prices > .prices-title {
+  text-align: center;
+}
+#prices > .prices-title > img {
+  width: 145px;
+  position: relative;
+  top: 95px;
+  left: 115px;
+  z-index: -1;
+}
+#prices > .prices-title > h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+#prices > .prices-title > p {
+  font-size: 16px;
+  color: #53545b;
+}
+#prices .tab-headers > span:first-child {
+  border: 2px solid #edeef3;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  padding: 3px 12px;
+  cursor: pointer;
+  border-right: none;
+}
+#prices .tab-headers > span:last-child {
+  border: 2px solid #edeef3;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 3px 12px;
+  cursor: pointer;
+  border-left: none;
+}
+#prices .tab-headers .active-price-tab {
+  background-color: #2b4eff;
+  color: white;
+  border-style: none;
+}
+#prices .tab-body {
+  padding: 0px 112px;
+}
+#prices .tab-body .price {
+  padding: 45px 50px 60px;
+  border-radius: 6px;
+  background-color: #f3f4f8;
+}
+#prices .tab-body .price > h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+#prices .tab-body .price > p {
+  color: #53545b;
+}
+#prices .tab-body .price > h4 {
+  font-size: 50px;
+  font-weight: 700;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e0e3ed;
+}
+#prices .tab-body .price > h4 > sub {
+  font-size: 17px;
+  font-weight: lighter;
+  position: relative;
+  right: 12px;
+}
+#prices .tab-body .price > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#prices .tab-body .price > ul > li {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transition: all 0.4s;
+}
+#prices .tab-body .price > ul > li:hover {
+  color: #30a820;
+}
+#prices .tab-body .price > ul > li:hover > i {
+  background-color: #30a820;
+  color: white;
+}
+#prices .tab-body .price > ul > li > i {
+  font-size: 8px;
+  color: #30a820;
+  border-radius: 50%;
+  background: rgba(48, 168, 32, 0.1);
+  padding: 5px 5.5px;
+  margin-right: 9px;
+  transition: all 0.4s;
+}
+#prices .tab-body .price > a {
+  text-decoration: none;
+  color: white;
+  background-color: #2b4eff;
+  border-radius: 4px;
+  padding: 0px 25px;
+  transition: all 0.3s;
+  display: inline-block;
+  height: 46px;
+  line-height: 44px;
+}
+#prices .tab-body .price > a:hover {
+  box-shadow: 0 10px 24px rgba(4, 23, 118, 0.3019607843);
+}
+#prices .tab-body .price-2 > .best-offer {
+  float: right;
+  position: relative;
+  right: -65px;
+  top: -20px;
+}
+#prices .tab-body .price-2 > .best-offer > span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background: #f2277e;
+  padding: 0 10px;
+  border-radius: 4px 4px 0;
+  position: relative;
+}
+#prices .tab-body .price-2 > a {
+  background-color: #f3f4f8;
+  border: 2px solid #d7d9e3;
+  color: black;
+}
+#prices .tab-body .price-2 > a:hover {
+  color: white;
+  background-color: #2b4eff;
+  border-color: #2b4eff;
+}
+
+footer {
+  background-color: #0e1133;
+}
+footer > .footer-top .footer-slogan {
+  background-color: #2b4eff;
+  padding: 50px 100px 53px 70px;
+  border-radius: 10px;
+  box-shadow: 0 30px 60px rgba(0, 4, 48, 0.3019607843);
+  background-image: url("../images/cta-shape.png");
+  background-repeat: no-repeat;
+  background-position-x: 48rem;
+  background-position-y: -18rem;
+  position: relative;
+  bottom: 5rem;
+}
+footer > .footer-top .footer-slogan > .slogan-area > h3 {
+  z-index: 1;
+  font-size: 46px;
+  color: #fff;
+  max-width: 560px;
+  font-weight: 700;
+  margin: 0;
+}
+footer > .footer-top .footer-slogan > .slogan-area > a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 4px;
+  padding: 0px 45px;
+  transition: all 0.3s;
+  display: inline-block;
+  height: 54px;
+  line-height: 58px;
+  font-weight: 500;
+}
+footer > .footer-top .footer-slogan > .slogan-area > a:hover {
+  box-shadow: 0 10px 24px rgba(4, 23, 118, 0.3019607843);
+}
+footer > .footer-center {
+  padding-bottom: 60px;
+}
+footer > .footer-center .socials > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #a1a2ab;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+footer > .footer-center .socials > ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+footer > .footer-center .socials > ul > li {
+  margin-right: 10px;
+}
+footer > .footer-center .socials > ul > li > a {
+  display: inline-block;
+  font-size: 15px;
+  width: 44px;
+  height: 44px;
+  line-height: 46px;
+  text-align: center;
+  border: 2px solid #285da1;
+  background-color: #285da1;
+  border-radius: 4px;
+  color: #fff;
+  transition: all 0.4s;
+}
+footer > .footer-center .socials > ul > li:first-child > a:hover {
+  background-color: transparent;
+  color: #285da1;
+}
+footer > .footer-center .socials > ul > li:nth-child(2) > a {
+  background-color: #03a9f4;
+  border-color: #03a9f4;
+}
+footer > .footer-center .socials > ul > li:nth-child(2) > a:hover {
+  background-color: transparent;
+  color: #03a9f4;
+}
+footer > .footer-center .socials > ul > li:nth-child(3) > a {
+  background-color: #d2173f;
+  border-color: #d2173f;
+}
+footer > .footer-center .socials > ul > li:nth-child(3) > a:hover {
+  background-color: transparent;
+  color: #d2173f;
+}
+footer > .footer-center .company-platform > h3 {
+  padding-top: 5px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+footer > .footer-center .company-platform > ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 21px;
+}
+footer > .footer-center .company-platform > ul > li {
+  margin-top: 7px;
+}
+footer > .footer-center .company-platform > ul > li > a {
+  color: #a1a2ab;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+footer > .footer-center .company-platform > ul > li > a:hover {
+  color: white;
+}
+footer > .footer-center .company {
+  padding-left: 110px;
+}
+footer > .footer-center .subscribe-area > h3 {
+  padding-top: 5px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+footer > .footer-center .subscribe-area > .search-box {
+  margin-top: 16px;
+}
+footer > .footer-center .subscribe-area > .search-box > input {
+  padding: 16px 11px;
+  outline: none;
+  border: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+footer > .footer-center .subscribe-area > .search-box > a {
+  display: inline-block;
+  color: white;
+  background-color: #2b4eff;
+  padding: 14px 26px 12px 26px;
+  font-size: 21px;
+}
+footer > .footer-center .subscribe-area > p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #83848a;
+  margin-top: 16px;
+}
+footer .footer-bottom {
+  padding: 20px 0;
+  border-top: 1px solid #1c1f3f;
+}
+footer .footer-bottom > p {
+  font-size: 14px;
+  color: #83848a;
+  margin-bottom: 0;
+  text-align: center;
+}
+footer .footer-bottom > p > a {
+  text-decoration: none;
+  color: white;
 }
 
 @media only screen and (max-width: 575px) {
@@ -669,5 +969,29 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   }
   #events .events-area .event {
     display: block !important;
+  }
+  #prices .tab-body {
+    padding: 0;
+  }
+  footer .footer-top .footer-slogan {
+    padding: 40px 40px;
+  }
+  footer .footer-top .footer-slogan .slogan-area {
+    display: block !important;
+  }
+  footer .footer-top .footer-slogan .slogan-area h3 {
+    font-size: 25px;
+  }
+  footer .footer-top .footer-slogan .slogan-area h3 > br {
+    display: none !important;
+  }
+  footer .footer-top .footer-slogan .slogan-area a {
+    margin-top: 20px !important;
+  }
+  footer .footer-center .company {
+    padding-left: 0px !important;
+  }
+  footer .footer-center .subscribe-area .search-box input {
+    width: 100% !important;
   }
 }/*# sourceMappingURL=home.css.map */
