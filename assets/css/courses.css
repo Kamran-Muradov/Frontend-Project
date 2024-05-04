@@ -335,49 +335,49 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #all-courses .cart > .course-more > a:hover {
   color: #2b4eff;
 }
-#all-courses .cart-2 > .thumbnail > a:last-child {
+#all-courses .cart-2 > .course-tag > a {
   background-color: #0fa0dd;
 }
 #all-courses .cart-2 > .course-more > .price > .new-price {
   color: #0fa0dd;
 }
-#all-courses .cart-3 > .thumbnail > a:last-child {
+#all-courses .cart-3 > .course-tag > a {
   background-color: #30a820;
 }
 #all-courses .cart-3 > .course-more > .price > .new-price {
   color: #30a820;
 }
-#all-courses .cart-4 > .thumbnail > a:last-child {
+#all-courses .cart-4 > .course-tag > a {
   background-color: #3b60ff;
 }
 #all-courses .cart-4 > .course-more > .price > .new-price {
   color: #3b60ff;
 }
-#all-courses .cart-5 > .thumbnail > a:last-child {
+#all-courses .cart-5 > .course-tag > a {
   background-color: #fa7919;
 }
 #all-courses .cart-5 > .course-more > .price > .new-price {
   color: #fa7919;
 }
-#all-courses .cart-6 > .thumbnail > a:last-child {
+#all-courses .cart-6 > .course-tag > a {
   background-color: #f2277e;
 }
 #all-courses .cart-6 > .course-more > .price > .new-price {
   color: #f2277e;
 }
-#all-courses .cart-7 > .thumbnail > a:last-child {
+#all-courses .cart-7 > .course-tag > a {
   background-color: #fa7919;
 }
 #all-courses .cart-7 > .course-more > .price > .new-price {
   color: #fa7919;
 }
-#all-courses .cart-8 > .thumbnail > a:last-child {
+#all-courses .cart-8 > .course-tag > a {
   background-color: #f2277e;
 }
 #all-courses .cart-8 > .course-more > .price > .new-price {
   color: #f2277e;
 }
-#all-courses .cart-9 > .thumbnail > a:last-child {
+#all-courses .cart-9 > .course-tag > a {
   background-color: #5744cb;
 }
 #all-courses .cart-9 > .course-more > .price > .new-price {
@@ -386,6 +386,7 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #all-courses .cart-list {
   border-radius: 6px;
   background-color: white;
+  position: relative;
 }
 #all-courses .cart-list .thumbnail {
   position: relative;
@@ -394,19 +395,22 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   border-bottom-left-radius: 6px;
   height: 100%;
 }
-#all-courses .cart-list .thumbnail > a:first-child > img {
+#all-courses .cart-list .thumbnail > img {
   width: 100%;
   height: 100%;
   transition: all 0.3s;
+  cursor: pointer;
 }
-#all-courses .cart-list .thumbnail > a:first-child > img:hover {
+#all-courses .cart-list .thumbnail > img:hover {
   transform: scale(1.1);
 }
-#all-courses .cart-list .thumbnail > a:last-child {
-  display: inline-block;
-  position: relative;
-  bottom: 20.4rem;
+#all-courses .cart-list .course-tag {
+  position: absolute;
+  top: 20px;
   left: 20px;
+}
+#all-courses .cart-list .course-tag > a {
+  display: inline-block;
   height: 24px;
   line-height: 24px;
   font-size: 14px;
@@ -503,31 +507,31 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #all-courses .cart-list .course-more > a:hover {
   color: #2b4eff;
 }
-#all-courses .cart-list-2 .thumbnail > a:last-child {
+#all-courses .cart-list-2 .course-tag > a {
   background-color: #0fa0dd;
 }
 #all-courses .cart-list-2 .course-more > .price > .new-price {
   color: #0fa0dd;
 }
-#all-courses .cart-list-3 .thumbnail > a:last-child {
+#all-courses .cart-list-3 .course-tag > a {
   background-color: #30a820;
 }
 #all-courses .cart-list-3 .course-more > .price > .new-price {
   color: #30a820;
 }
-#all-courses .cart-list-4 .thumbnail > a:last-child {
+#all-courses .cart-list-4 .course-tag > a {
   background-color: #3b60ff;
 }
 #all-courses .cart-list-4 .course-more > .price > .new-price {
   color: #3b60ff;
 }
-#all-courses .cart-list-5 .thumbnail > a:last-child {
+#all-courses .cart-list-5 .course-tag > a {
   background-color: #fa7919;
 }
 #all-courses .cart-list-5 .course-more > .price > .new-price {
   color: #fa7919;
 }
-#all-courses .cart-list-6 .thumbnail > a:last-child {
+#all-courses .cart-list-6 .course-tag > a {
   background-color: #f2277e;
 }
 #all-courses .cart-list-6 .course-more > .price > .new-price {
@@ -797,12 +801,6 @@ footer .footer-bottom > p > a {
   #all-courses .tab-body .cart-list .course-more {
     padding-left: 25px !important;
     padding-right: 25px !important;
-  }
-  #all-courses .tab-body .cart a:last-child {
-    bottom: 17rem !important;
-  }
-  #all-courses .cart-list .thumbnail > a:last-child {
-    bottom: 18rem !important;
   }
   footer .footer-top .footer-slogan {
     padding: 40px 40px;

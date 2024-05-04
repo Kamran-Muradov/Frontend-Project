@@ -400,6 +400,7 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #all-courses .cart {
   border-radius: 6px;
   background-color: white;
+  position: relative;
 }
 #all-courses .cart > .thumbnail {
   position: relative;
@@ -407,12 +408,13 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
-#all-courses .cart > .thumbnail > a:first-child > img {
+#all-courses .cart > .thumbnail > img {
   width: 100%;
-  height: 246px;
+  height: 100%;
   transition: all 0.3s;
+  cursor: pointer;
 }
-#all-courses .cart > .thumbnail > a:first-child > img:hover {
+#all-courses .cart > .thumbnail > img:hover {
   transform: scale(1.1);
 }
 #all-courses .cart > .thumbnail > a:last-child {
@@ -420,6 +422,23 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   position: absolute;
   bottom: 12.5rem;
   left: 20px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #b128ff;
+  padding: 0 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+#all-courses .cart > .course-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+#all-courses .cart > .course-tag > a {
+  display: inline-block;
   height: 24px;
   line-height: 24px;
   font-size: 14px;
@@ -500,31 +519,31 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #all-courses .cart > .course-more > a:hover {
   color: #2b4eff;
 }
-#all-courses .cart-2 > .thumbnail > a:last-child {
+#all-courses .cart-2 > .course-tag > a {
   background-color: #0fa0dd;
 }
 #all-courses .cart-2 > .course-more > .price > .new-price {
   color: #0fa0dd;
 }
-#all-courses .cart-3 > .thumbnail > a:last-child {
+#all-courses .cart-3 > .course-tag > a {
   background-color: #30a820;
 }
 #all-courses .cart-3 > .course-more > .price > .new-price {
   color: #30a820;
 }
-#all-courses .cart-4 > .thumbnail > a:last-child {
+#all-courses .cart-4 > .course-tag > a {
   background-color: #3b60ff;
 }
 #all-courses .cart-4 > .course-more > .price > .new-price {
   color: #3b60ff;
 }
-#all-courses .cart-5 > .thumbnail > a:last-child {
+#all-courses .cart-5 > .course-tag > a {
   background-color: #fa7919;
 }
 #all-courses .cart-5 > .course-more > .price > .new-price {
   color: #fa7919;
 }
-#all-courses .cart-6 > .thumbnail > a:last-child {
+#all-courses .cart-6 > .course-tag > a {
   background-color: #f2277e;
 }
 #all-courses .cart-6 > .course-more > .price > .new-price {

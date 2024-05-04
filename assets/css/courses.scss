@@ -208,25 +208,6 @@ header {
     }
 }
 
-// .cart-list{
-//     > .thumbnail {
-//         position: relative;
-//         overflow: hidden;
-//         border-top-left-radius: 6px;
-//         border-top-right-radius: 6px;
-//         > a:first-child {
-//             > img {
-//                 width: 100%;
-//                 height: 246px;
-//                 transition: all 0.3s;
-//                 &:hover {
-//                     transform: scale(1.1);
-//                 }
-//             }
-//         }
-//     }
-// }
-
 #all-courses {
     background-color: #f5f5f5;
     padding-top: 7rem;
@@ -285,29 +266,22 @@ header {
             overflow: hidden;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
-            // > a {
-                > img {
-                    width: 100%;
-                    height: 100%;
-                    transition: all 0.3s;
-                    cursor: pointer;
-                    &:hover {
-                        transform: scale(1.1);
-                    }
+            > img {
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
                 }
-            // }
-                
-            
+            }
         }
-        > .course-tag{
+        > .course-tag {
             position: absolute;
             top: 20px;
             left: 20px;
             > a {
                 display: inline-block;
-                // position: relative;
-                // bottom: 13rem;
-                // left: 20px;
                 height: 24px;
                 line-height: 24px;
                 font-size: 14px;
@@ -399,8 +373,8 @@ header {
         }
     }
     .cart-2 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #0fa0dd;
             }
         }
@@ -413,8 +387,8 @@ header {
         }
     }
     .cart-3 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #30a820;
             }
         }
@@ -427,8 +401,8 @@ header {
         }
     }
     .cart-4 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #3b60ff;
             }
         }
@@ -441,8 +415,8 @@ header {
         }
     }
     .cart-5 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #fa7919;
             }
         }
@@ -455,8 +429,8 @@ header {
         }
     }
     .cart-6 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #f2277e;
             }
         }
@@ -469,8 +443,8 @@ header {
         }
     }
     .cart-7 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #fa7919;
             }
         }
@@ -483,8 +457,8 @@ header {
         }
     }
     .cart-8 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #f2277e;
             }
         }
@@ -497,8 +471,8 @@ header {
         }
     }
     .cart-9 {
-        > .thumbnail {
-            > a:last-child {
+        > .course-tag {
+            > a {
                 background-color: #5744cb;
             }
         }
@@ -514,28 +488,29 @@ header {
     .cart-list {
         border-radius: 6px;
         background-color: white;
+        position: relative;
         .thumbnail {
             position: relative;
             overflow: hidden;
             border-top-left-radius: 6px;
             border-bottom-left-radius: 6px;
             height: 100%;
-            > a:first-child {
-                > img {
-                    width: 100%;
-                    height: 100%;
-                    transition: all 0.3s;
-                    &:hover {
-                        transform: scale(1.1);
-                    }
+            > img {
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
-
-            > a:last-child {
+        }
+        .course-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            > a {
                 display: inline-block;
-                position: relative;
-                bottom: 20.4rem;
-                left: 20px;
                 height: 24px;
                 line-height: 24px;
                 font-size: 14px;
@@ -641,8 +616,8 @@ header {
         }
     }
     .cart-list-2 {
-        .thumbnail {
-            > a:last-child {
+        .course-tag  {
+            > a {
                 background-color: #0fa0dd;
             }
         }
@@ -655,8 +630,8 @@ header {
         }
     }
     .cart-list-3 {
-        .thumbnail {
-            > a:last-child {
+        .course-tag  {
+            > a {
                 background-color: #30a820;
             }
         }
@@ -669,8 +644,8 @@ header {
         }
     }
     .cart-list-4 {
-        .thumbnail {
-            > a:last-child {
+        .course-tag  {
+            > a {
                 background-color: #3b60ff;
             }
         }
@@ -683,8 +658,8 @@ header {
         }
     }
     .cart-list-5 {
-        .thumbnail {
-            > a:last-child {
+        .course-tag  {
+            > a {
                 background-color: #fa7919;
             }
         }
@@ -697,8 +672,8 @@ header {
         }
     }
     .cart-list-6 {
-        .thumbnail {
-            > a:last-child {
+        .course-tag  {
+            > a {
                 background-color: #f2277e;
             }
         }
@@ -959,7 +934,7 @@ footer {
             color: #83848a;
             margin-bottom: 0;
             text-align: center;
-            >a{
+            > a {
                 text-decoration: none;
                 color: white;
             }
@@ -1010,105 +985,16 @@ footer {
     #all-courses .tab-body .cart-list .course-content {
         padding-left: 25px;
         padding-right: 25px;
-        // padding-bottom: 85px;
     }
 
     #all-courses .tab-body .cart-list .course-content a {
         font-size: 20px !important;
     }
 
-    #all-courses .tab-body .cart-list .course-more{
+    #all-courses .tab-body .cart-list .course-more {
         padding-left: 25px !important;
         padding-right: 25px !important;
     }
-
-    #all-courses .tab-body .cart a:last-child {
-        bottom: 17rem !important;
-    }
-
-    #all-courses .cart-list .thumbnail > a:last-child{
-        bottom: 18rem !important;
-    }
-
-    // #banner {
-    //     padding-top: 0px !important;
-    // }
-
-    // #banner img:first-child {
-    //     top: 43% !important;
-    // }
-
-    // #banner img:nth-child(3) {
-    //     bottom: 0px !important;
-    // }
-
-    // #banner img:nth-of-type(4) {
-    //     display: none;
-    // }
-
-    // #banner .banner-left span:first-child {
-    //     font-size: 25px !important;
-    // }
-
-    // #banner .banner-left h1 {
-    //     font-size: 25px !important;
-    // }
-
-    // #banner .banner-left h1 img {
-    //     width: 75px !important;
-    //     position: relative !important;
-    //     right: 81% !important;
-    //     z-index: -1 !important;
-    //     bottom: 0px !important;
-    // }
-
-    // #banner .banner-left p {
-    //     position: relative !important;
-    // }
-
-    // #banner .banner-left a {
-    //     position: relative !important;
-    // }
-
-    // #banner .banner-right {
-    //     max-height: 700px !important;
-    // }
-
-    // #banner .banner-right img:first-of-type {
-    //     margin-top: 11% !important;
-    // }
-
-    // #banner .banner-right .slogan {
-    //     bottom: -20rem !important;
-    // }
-
-    // #popular-courses .section-head {
-    //     display: block !important;
-    // }
-
-    // #popular-courses .section-head h2 {
-    //     width: 100% !important;
-    // }
-
-    // #popular-courses .section-head h2 img {
-    //     left: 70px !important;
-    // }
-
-    // #popular-courses .online-course img {
-    //     display: none;
-    // }
-
-    // #all-courses .tab-headers ul {
-    //     display: block;
-    // }
-
-    // #events .events-area .event {
-    //     display: block !important;
-    // }
-
-    // #prices .tab-body {
-    //     padding: 0;
-    // }
 
     footer .footer-top .footer-slogan {
         padding: 40px 40px;
