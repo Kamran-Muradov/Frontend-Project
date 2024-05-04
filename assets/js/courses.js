@@ -38,6 +38,24 @@ window.onscroll = function () {
   changeHeaderBackground();
 };
 
+let courseTabHeaders = document.querySelectorAll("#all-courses .tab-area .tab-headers i");
+let courseTabContents = document.querySelectorAll("#all-courses .tab-body .content");
+
+
+courseTabHeaders.forEach(header => {
+  header.addEventListener("click", function () {
+    document.querySelector(".active-tab").classList.remove("active-tab");
+    this.classList.add("active-tab");
+    for (const item of courseTabContents) {
+      if (item.getAttribute("data-id") == this.getAttribute("data-id")) {
+        item.classList.remove("d-none");
+      } else {
+        item.classList.add("d-none");
+      }
+    }
+  });
+});
+
 function changeHeaderBackground() {
   if (window.scrollY > sticky) {
     headerElem.style.backgroundColor = "white";
