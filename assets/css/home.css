@@ -22,6 +22,9 @@ header > .header-area {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+header > .header-area > .row > .col-md-3 > .header-left > img {
+  cursor: pointer;
+}
 header > .header-area > .row > .col-md-3 > .header-left > .categories {
   border-left: 1px solid rgb(191, 191, 191);
   padding-left: 25px;
@@ -182,6 +185,9 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   right: 0px;
   bottom: 10rem;
 }
+#banner > .custom-container > .row > .col-md-6:first-child > .banner-left {
+  margin-top: 45px;
+}
 #banner > .custom-container > .row > .col-md-6:first-child > .banner-left > span {
   font-size: 60px;
 }
@@ -192,13 +198,12 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   z-index: 1;
   line-height: 1;
 }
-#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h1 > span > img {
+#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h1 > img {
   width: 193px;
-  margin-left: -205px;
-  margin-right: 41px;
   position: relative;
+  bottom: 100px;
+  right: 18px;
   z-index: -1;
-  margin-top: 32px;
 }
 #banner > .custom-container > .row > .col-md-6:first-child > .banner-left > p {
   font-size: 22px;
@@ -216,7 +221,7 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #banner > .custom-container > .row > .col-md-6:last-child > .banner-right {
-  height: 630px;
+  max-height: 630px;
 }
 #banner > .custom-container > .row > .col-md-6:last-child > .banner-right > img:first-child {
   max-width: 400px;
@@ -527,12 +532,94 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   color: #f2277e;
 }
 
+#events > .event-title {
+  text-align: center;
+}
+#events > .event-title > img {
+  width: 135px;
+  position: relative;
+  top: 47px;
+  left: 74px;
+  z-index: -1;
+}
+#events > .event-title > h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+#events > .event-title > p {
+  font-size: 16px;
+  color: #53545b;
+}
+#events .image-area {
+  position: absolute;
+  z-index: -1;
+}
+#events .events-area {
+  background-image: url("../images/events-shape.png");
+  background-repeat: no-repeat;
+}
+#events .events-area > .event {
+  padding: 28px 50px;
+  border-radius: 6px;
+  box-shadow: 0 30px 50px rgba(1, 11, 60, 0.1019607843);
+  background-color: white;
+  max-width: 976px;
+  margin: auto;
+  border-left: 3px solid #2b4eff;
+  border-left-style: none;
+  transition: all 0.4s;
+}
+#events .events-area > .event:hover {
+  border-left-style: solid;
+}
+#events .events-area > .event .event-meta > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6d6e75;
+  margin: 0;
+}
+#events .events-area > .event .event-meta > a {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+}
+#events .events-area > .event .event-meta > a:hover {
+  color: #2b4eff;
+}
+#events .events-area > .event > a {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+}
+#events .events-area > .event > a:hover {
+  color: #2b4eff;
+}
+
 @media only screen and (max-width: 575px) {
+  .custom-container {
+    padding: 0px 25px;
+  }
   .header-area .header-left .categories {
     display: none;
   }
   .header-area .header-right .search-area {
     display: none;
+  }
+  .header-area .header-right .navbar {
+    margin-top: 20px !important;
+  }
+  #banner {
+    padding-top: 0px !important;
+  }
+  #banner img:first-child {
+    top: 43% !important;
+  }
+  #banner img:nth-child(3) {
+    bottom: 0px !important;
   }
   #banner img:nth-of-type(4) {
     display: none;
@@ -540,13 +627,47 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
   #banner .banner-left span:first-child {
     font-size: 25px !important;
   }
+  #banner .banner-left h1 {
+    font-size: 25px !important;
+  }
+  #banner .banner-left h1 img {
+    width: 75px !important;
+    position: relative !important;
+    right: 81% !important;
+    z-index: -1 !important;
+    bottom: 0px !important;
+  }
+  #banner .banner-left p {
+    position: relative !important;
+  }
+  #banner .banner-left a {
+    position: relative !important;
+  }
+  #banner .banner-right {
+    max-height: 700px !important;
+  }
+  #banner .banner-right img:first-of-type {
+    margin-top: 11% !important;
+  }
+  #banner .banner-right .slogan {
+    bottom: -20rem !important;
+  }
   #popular-courses .section-head {
     display: block !important;
+  }
+  #popular-courses .section-head h2 {
+    width: 100% !important;
+  }
+  #popular-courses .section-head h2 img {
+    left: 70px !important;
   }
   #popular-courses .online-course img {
     display: none;
   }
   #all-courses .tab-headers ul {
     display: block;
+  }
+  #events .events-area .event {
+    display: block !important;
   }
 }/*# sourceMappingURL=home.css.map */
