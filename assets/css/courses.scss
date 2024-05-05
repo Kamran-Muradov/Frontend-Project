@@ -83,6 +83,7 @@ header {
                                         padding: 0;
                                         transition: all 0.3s;
                                         opacity: 0;
+                                        top: 86px;
                                         > li {
                                             border-bottom: 1px solid #edeef3;
                                             padding: 9px 20px;
@@ -128,12 +129,17 @@ header {
                             > input {
                                 width: 280px;
                                 height: 50px;
-                                border: 1px solid white;
+                                line-height: 20px;
                                 border-radius: 4px;
-                                padding-left: 46px;
-                                padding-right: 55px;
+                                outline: none;
+                                border: 1px solid #ffffff;
+                                font-size: 16px;
+                                padding: 25px 65px 20px 55px;
                                 outline: none;
                                 transition: all 0.3s;
+                                &::placeholder {
+                                    font-size: 14px;
+                                }
                                 &:focus {
                                     border-color: #2b4eff !important;
                                 }

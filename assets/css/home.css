@@ -74,6 +74,7 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > .navbar-collaps
   padding: 0;
   transition: all 0.3s;
   opacity: 0;
+  top: 86px;
 }
 header > .header-area > .row > .col-md-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .submenu > li {
   border-bottom: 1px solid #edeef3;
@@ -115,12 +116,20 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > .search-area > 
 header > .header-area > .row > .col-md-9 > .header-right > nav > .search-area > input {
   width: 280px;
   height: 50px;
-  border: 1px solid white;
+  line-height: 20px;
   border-radius: 4px;
-  padding-left: 46px;
-  padding-right: 55px;
+  outline: none;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  padding: 25px 65px 20px 55px;
   outline: none;
   transition: all 0.3s;
+}
+header > .header-area > .row > .col-md-9 > .header-right > nav > .search-area > input::-moz-placeholder {
+  font-size: 14px;
+}
+header > .header-area > .row > .col-md-9 > .header-right > nav > .search-area > input::placeholder {
+  font-size: 14px;
 }
 header > .header-area > .row > .col-md-9 > .header-right > nav > .search-area > input:focus {
   border-color: #2b4eff !important;
