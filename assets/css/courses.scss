@@ -209,7 +209,6 @@ header {
 }
 
 #all-courses {
-    background-color: #f5f5f5;
     padding-top: 7rem;
     padding-bottom: 14rem;
     .tab-area {
@@ -261,6 +260,7 @@ header {
         border-radius: 6px;
         background-color: white;
         position: relative;
+        box-shadow: 0 30px 40px #010b3c0f;
         > .thumbnail {
             position: relative;
             overflow: hidden;
@@ -489,6 +489,7 @@ header {
         border-radius: 6px;
         background-color: white;
         position: relative;
+        box-shadow: 0 30px 40px #010b3c0f;
         .thumbnail {
             position: relative;
             overflow: hidden;
@@ -946,9 +947,6 @@ footer {
     .custom-container {
         padding: 0px 25px;
     }
-    header {
-        position: sticky !important;
-    }
     .header-area .header-left .categories {
         display: none;
     }
@@ -959,14 +957,6 @@ footer {
 
     .header-area .header-right .navbar {
         margin-top: 20px !important;
-    }
-
-    #title-area {
-        top: -156px !important;
-    }
-
-    #all-courses {
-        padding-top: 0px !important;
     }
 
     #all-courses .tab-area .sort-area {
