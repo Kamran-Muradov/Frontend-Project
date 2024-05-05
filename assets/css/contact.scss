@@ -211,6 +211,10 @@ header {
 #contact-area {
     padding-top: 115px;
     padding-bottom: 120px;
+    position: relative;
+    > img {
+        position: absolute;
+    }
     .message-area {
         > .title {
             margin-bottom: 40px;
@@ -329,14 +333,12 @@ header {
     }
 
     .contact-info {
-        > .shape-area {
-            position: relative;
-            z-index: 1;
-        }
+        position: relative;
         > .info-area {
             padding: 45px 70px 45px 40px;
             border-radius: 4px;
             box-shadow: 0 30px 50px #010b3c1a;
+            background-color: white;
             position: relative;
             z-index: 1;
             > .location,
@@ -429,6 +431,23 @@ header {
                         }
                     }
                 }
+            }
+        }
+        > .shape-area {
+            > img {
+                position: absolute;
+            }
+            > img:first-child {
+                left: -32px;
+                bottom: 72px;
+            }
+            > img:nth-child(2) {
+                right: -80px;
+                bottom: 195px;
+            }
+            > img:nth-child(3) {
+                top: 37px;
+                right: -29px;
             }
         }
     }

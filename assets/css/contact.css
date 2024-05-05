@@ -195,6 +195,10 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #contact-area {
   padding-top: 115px;
   padding-bottom: 120px;
+  position: relative;
+}
+#contact-area > img {
+  position: absolute;
 }
 #contact-area .message-area > .title {
   margin-bottom: 40px;
@@ -301,14 +305,14 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #contact-area .button-area > button:hover {
   box-shadow: 0 10px 24px rgba(4, 23, 118, 0.3019607843);
 }
-#contact-area .contact-info > .shape-area {
+#contact-area .contact-info {
   position: relative;
-  z-index: 1;
 }
 #contact-area .contact-info > .info-area {
   padding: 45px 70px 45px 40px;
   border-radius: 4px;
   box-shadow: 0 30px 50px rgba(1, 11, 60, 0.1019607843);
+  background-color: white;
   position: relative;
   z-index: 1;
 }
@@ -400,6 +404,21 @@ header > .header-area > .row > .col-md-9 > .header-right > nav > a:hover {
 #contact-area .contact-info > .info-area > .socials > ul > li:nth-child(3) > a:hover {
   background-color: #d8163f;
   color: white;
+}
+#contact-area .contact-info > .shape-area > img {
+  position: absolute;
+}
+#contact-area .contact-info > .shape-area > img:first-child {
+  left: -32px;
+  bottom: 72px;
+}
+#contact-area .contact-info > .shape-area > img:nth-child(2) {
+  right: -80px;
+  bottom: 195px;
+}
+#contact-area .contact-info > .shape-area > img:nth-child(3) {
+  top: 37px;
+  right: -29px;
 }
 
 #support-area {
