@@ -5,7 +5,7 @@ let navSubmenus = document.querySelectorAll(".submenu");
 let mobileNavBtn = document.querySelector(".header-right .navbar button i");
 let categoryElem = document.querySelector(".categories");
 let categorySubmenu = document.querySelector(
-  ".categories .category-submenu ul"
+  ".categories .category-submenu"
 );
 let headerElem = document.querySelector("header");
 let sticky = headerElem.offsetTop;

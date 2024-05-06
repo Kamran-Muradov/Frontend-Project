@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assets/css/home.css" />
   </head>
   <body>
-    <header class="sticky-top">
+    <header>
       <div class="header-area">
         <div class="row align-items-center">
           <div class="col-3">
@@ -35,8 +35,7 @@
                   </div>
                   <span>Category</span>
                 </div>
-                <div class="category-submenu">
-                  <ul>
+                  <ul class="category-submenu">
                     <li>
                       <a href="">English Learning</a>
                     </li>
@@ -53,7 +52,6 @@
                       <a href="">Video Edition</a>
                     </li>
                   </ul>
-                </div>
               </div>
             </div>
           </div>
@@ -73,7 +71,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                    <li data-id="1" class="nav-item active">
+                    <li data-id="1" class="nav-item">
                       <a class="nav-link" href="./home.html">
                         <span>Home</span>
                         <i class="fa-solid fa-chevron-down"></i>
@@ -84,23 +82,45 @@
                         <li><a href="">Home Style 3</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item">
+                    <li data-id="2" class="nav-item">
                       <a class="nav-link" href="./courses.html">
                         <span>Courses</span>
                         <i class="fa-solid fa-chevron-down"></i>
                       </a>
+                      <ul class="submenu" data-id="2">
+                        <li><a href="">Courses</a></li>
+                        <li><a href="">Course List</a></li>
+                        <li><a href="">Course Sidebar</a></li>
+                        <li><a href="">Course Details</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item">
+                    <li data-id="3" class="nav-item">
                       <a class="nav-link" href="./blog.html">
                         <span>Blog</span>
                         <i class="fa-solid fa-chevron-down"></i>
                       </a>
+                      <ul class="submenu" data-id="3">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Blog Details</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item">
+                    <li data-id="4" class="nav-item">
                       <a class="nav-link" href="">
                         <span>Pages</span>
                         <i class="fa-solid fa-chevron-down"></i>
                       </a>
+                      <ul class="submenu" data-id="4">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Instructor</a></li>
+                        <li><a href="">Instructor Details</a></li>
+                        <li><a href="">Event Details</a></li>
+                        <li><a href="">My Cart</a></li>
+                        <li><a href="">My Wishlist</a></li>
+                        <li><a href="">Checkout</a></li>
+                        <li><a href="">Sign In</a></li>
+                        <li><a href="">Sign Up</a></li>
+                        <li><a href="">Error</a></li>
+                      </ul>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="./contact.html">Contact</a>
@@ -1354,59 +1374,73 @@
       </section>
       <section id="events" class="mb-5 mt-5">
         <div class="event-title">
-          <img src="./assets/images/yellow-bg.png" alt="" />
-          <h2>Current Events</h2>
+          <h2>
+            Current
+            <span
+              >Events<img src="./assets/images/yellow-bg.png" alt=""
+            /></span>
+          </h2>
           <p>We found 13 events available for you.</p>
         </div>
         <div class="custom-container">
           <div class="events-area mt-5">
-            <div
-              class="event event-1 d-flex justify-content-between align-items-center"
-            >
-              <div class="event-meta">
-                <p>Jun 14, 2022 | 12:00 am - 2:30 pm | New York</p>
-                <a href="">Digital transformation conference</a>
+            <div class="row">
+              <div class="col-10 offset-md-1">
+                <div
+                  class="event event-1 d-flex justify-content-between align-items-center"
+                >
+                  <div class="event-meta">
+                    <p>Jun 14, 2022 | 12:00 am - 2:30 pm | New York</p>
+                    <a href="">Digital transformation conference</a>
+                  </div>
+                  <a href=""
+                    >View more
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
-              <a href=""
-                >View more
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div
-              class="event event-1 mt-2 d-flex justify-content-between align-items-center"
-            >
-              <div class="event-meta">
-                <p>Jun 14, 2022 | 12:00 am - 2:30 pm | New York</p>
-                <a href="">Digital transformation conference</a>
+              <div class="col-10 offset-md-1">
+                <div
+                  class="event event-2 mt-2 d-flex justify-content-between align-items-center"
+                >
+                  <div class="event-meta">
+                    <p>April 10, 2022 | 9:00 am - 5:00 pm | Mindahan</p>
+                    <a href="">World education day conference</a>
+                  </div>
+                  <a href=""
+                    >View more
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
-              <a href=""
-                >View more
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div
-              class="event event-1 mt-2 d-flex justify-content-between align-items-center"
-            >
-              <div class="event-meta">
-                <p>Jun 14, 2022 | 12:00 am - 2:30 pm | New York</p>
-                <a href="">Digital transformation conference</a>
+              <div class="col-10 offset-md-1">
+                <div
+                  class="event event-3 mt-2 d-flex justify-content-between align-items-center"
+                >
+                  <div class="event-meta">
+                    <p>July 16, 2022 | 0:30 am - 1:30 pm | Weedpatch</p>
+                    <a href="">Foundations of global health</a>
+                  </div>
+                  <a href=""
+                    >View more
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
-              <a href=""
-                >View more
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div
-              class="event event-1 mt-2 d-flex justify-content-between align-items-center"
-            >
-              <div class="event-meta">
-                <p>Jun 14, 2022 | 12:00 am - 2:30 pm | New York</p>
-                <a href="">Digital transformation conference</a>
+              <div class="col-10 offset-md-1">
+                <div
+                  class="event event-4 mt-2 d-flex justify-content-between align-items-center"
+                >
+                  <div class="event-meta">
+                    <p>March 24, 2022 | 10:30 am - 12:00 pm | Lnland</p>
+                    <a href="">Business creativity workshops</a>
+                  </div>
+                  <a href=""
+                    >View more
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
-              <a href=""
-                >View more
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
             </div>
           </div>
         </div>

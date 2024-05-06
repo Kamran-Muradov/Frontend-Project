@@ -7,7 +7,7 @@ let navHeaderList = document.querySelectorAll(
 let mobileNavBtn = document.querySelector(".header-right .navbar button i");
 let categoryElem = document.querySelector(".categories");
 let categorySubmenu = document.querySelector(
-  ".categories .category-submenu ul"
+  ".categories .category-submenu"
 );
 let headerLogo = document.querySelector(".header-left img");
 let navSubmenus = document.querySelectorAll(".submenu");
