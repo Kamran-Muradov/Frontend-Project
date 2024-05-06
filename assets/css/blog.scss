@@ -8,6 +8,77 @@
     box-sizing: border-box;
 }
 
+.nav-white {
+    color: white !important;
+    &:hover {
+        border-color: white !important;
+    }
+}
+
+.nav-black {
+    color: black !important;
+    &:hover {
+        border-color: black !important;
+    }
+}
+
+.category-white {
+    > .category-test {
+        > .grid-box {
+            > i {
+                color: white !important;
+            }
+        }
+        > span {
+            color: white !important;
+        }
+    }
+}
+
+.category-black {
+    > .category-text {
+        > .grid-box {
+            > i {
+                color: black !important;
+                &:hover {
+                    transition: color 0.3s;
+                    color: #2b4eff !important;
+                }
+                &:not(:hover) {
+                    transition: color 0.3s;
+                }
+            }
+        }
+        > span {
+            color: black !important;
+            &:hover {
+                transition: color 0.3s;
+                color: #2b4eff !important;
+            }
+            &:not(:hover) {
+                transition: color 0.3s;
+            }
+        }
+        &:hover {
+            > .grid-box {
+                > i {
+                    transition: color 0.3s;
+                    color: #2b4eff !important;
+                }
+            }
+            > span {
+                transition: color 0.3s;
+                color: #2b4eff !important;
+            }
+        }
+    }
+}
+
+.active-submenu {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -20,48 +91,88 @@ header {
         padding-top: 20px;
         padding-bottom: 20px;
         > .row {
-            > .col-md-3 {
+            > .col-3 {
                 > .header-left {
                     > img {
                         cursor: pointer;
                     }
                     > .categories {
-                        border-left: 1px solid rgb(191, 191, 191);
                         padding-left: 25px;
                         padding-top: 1px;
                         line-height: 43px;
-                        > img {
-                            width: 20px;
-                            height: 20px;
-                            cursor: pointer;
-                            transition: all 0.3s;
+                        border-left: 1px solid rgb(191, 191, 191);
+                        > .category-text {
+                            > .grid-box {
+                                margin-right: 5px;
+                                > i {
+                                    color: white;
+                                    font-size: 18px;
+                                    margin-right: 1px;
+                                    cursor: pointer;
+                                }
+                            }
+                            > span {
+                                color: white;
+                                font-weight: 500;
+                                padding-left: 5px;
+                                cursor: pointer;
+                            }
                         }
-                        > span {
-                            color: white;
-                            font-weight: 500;
-                            padding-left: 5px;
-                            cursor: pointer;
-                            transition: all 0.3s;
+                        > .category-submenu {
+                            position: absolute;
+                            > ul {
+                                list-style: none;
+                                margin: 0;
+                                width: 200px;
+                                padding: 17px 0 15px;
+                                background: #ffffff;
+                                box-shadow: 0 10px 20px #08002a14;
+                                border-radius: 4px;
+                                z-index: 1;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: all 0.3s;
+                                > li {
+                                    > a {
+                                        width: 100%;
+                                        padding: 0px 30px;
+                                        color: #6d6e75;
+                                        font-weight: 500;
+                                        position: relative;
+                                        text-decoration: none;
+                                        transition: all 0.3s;
+                                        &:hover {
+                                            color: #2b4eff;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
-            > .col-md-9 {
+            > .col-9 {
                 > .header-right {
                     > nav {
                         background: none !important;
+                        > button{
+                            border-style: none;
+                            &:focus{
+                                outline: none;
+                                box-shadow: none;
+                            }
+                            >i{
+                                font-size: 30px;
+                                color: #2b4eff;
+                            }
+                        }
                         > .navbar-collapse {
                             > .navbar-nav {
                                 margin-left: 150px;
                                 > .nav-item {
                                     > .nav-link {
-                                        color: white;
-                                        transition: all 0.3s;
-                                        border-bottom: 1px solid white;
-                                        border-style: none;
-                                        &:hover {
-                                            border-style: solid;
-                                        }
+                                        transition: border 0.4s;
+                                        border-bottom: 1px solid transparent;
                                         > i {
                                             font-size: 10px;
                                         }
@@ -98,9 +209,6 @@ header {
                                         > li:last-of-type {
                                             border-bottom: none;
                                         }
-                                    }
-                                    > .active {
-                                        opacity: 1;
                                     }
                                 }
                             }
@@ -823,8 +931,16 @@ footer {
         display: none;
     }
 
+    .header-area .header-right a {
+        display: none;
+    }
+
     .header-area .header-right .navbar {
         margin-top: 20px !important;
+        margin: 0 !important;
+        display: flex !important;
+        justify-content: end;
+        background: transparent !important;
     }
 
     #blog-area .blog-sidebar {

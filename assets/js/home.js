@@ -2,15 +2,38 @@
 
 let navHeaders = document.querySelectorAll(".navbar-collapse .nav-item");
 let navSubmenus = document.querySelectorAll(".submenu");
+let mobileNavBtn = document.querySelector(".header-right .navbar button i");
+let categoryElem = document.querySelector(".categories");
+let categorySubmenu = document.querySelector(
+  ".categories .category-submenu ul"
+);
 let headerElem = document.querySelector("header");
 let sticky = headerElem.offsetTop;
 let searchInput = document.querySelector(".search-area input");
+
+function changeHeaderStyle() {
+  if (window.scrollY > sticky) {
+    headerElem.style.backgroundColor = "white";
+    searchInput.style.backgroundColor = "#edeef3";
+  } else {
+    headerElem.style.backgroundColor = "#edeef3";
+    searchInput.style.backgroundColor = "white";
+  }
+}
+
+categoryElem.addEventListener("mouseover", function () {
+  categorySubmenu.classList.add("active-submenu");
+});
+
+categoryElem.addEventListener("mouseleave", function () {
+  categorySubmenu.classList.remove("active-submenu");
+});
 
 navHeaders.forEach(navHeader => {
   navHeader.addEventListener("mouseover", function () {
     for (const item of navSubmenus) {
       if (item.getAttribute("data-id") == navHeader.getAttribute("data-id")) {
-        item.classList.add("active");
+        item.classList.add("active-submenu");
       }
     }
   });
@@ -20,9 +43,9 @@ navHeaders.forEach(navHeader => {
   navHeader.addEventListener("mouseleave", function () {
     for (const item of navSubmenus) {
       if (item.getAttribute("data-id") == navHeader.getAttribute("data-id")) {
-        item.classList.remove("active");
+        item.classList.remove("active-submenu");
         item.addEventListener("mouseover", function () {
-          item.classList.remove("active");
+          item.classList.remove("active-submenu");
         });
       }
     }
@@ -30,18 +53,10 @@ navHeaders.forEach(navHeader => {
 });
 
 window.onscroll = function () {
-  changeHeaderBackground();
+  changeHeaderStyle();
 };
 
-function changeHeaderBackground() {
-  if (window.scrollY > sticky) {
-    headerElem.style.backgroundColor = "white";
-    searchInput.style.backgroundColor = "#edeef3";
-  } else {
-    headerElem.style.backgroundColor = "#edeef3";
-    searchInput.style.backgroundColor = "white";
-  }
-}
+
 
 let courseTabHeaders = document.querySelectorAll("#all-courses .tab-headers ul li");
 let courseTabContents = document.querySelectorAll("#all-courses .tab-body .content");

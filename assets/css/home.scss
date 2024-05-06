@@ -7,6 +7,11 @@
     margin: auto;
     box-sizing: border-box;
 }
+
+.active-submenu {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 header {
     position: fixed;
     width: 100%;
@@ -19,40 +24,90 @@ header {
         padding-top: 20px;
         padding-bottom: 20px;
         > .row {
-            > .col-md-3 {
+            > .col-3 {
                 > .header-left {
                     > img {
                         cursor: pointer;
                     }
                     > .categories {
-                        border-left: 1px solid rgb(191, 191, 191);
                         padding-left: 25px;
                         padding-top: 1px;
                         line-height: 43px;
-                        > img {
-                            width: 20px;
-                            height: 20px;
-                            cursor: pointer;
-                            transition: all 0.3s;
+                        border-left: 1px solid rgb(191, 191, 191);
+                        > .category-text {
+                            > .grid-box {
+                                margin-right: 5px;
+                                > i {
+                                    font-size: 18px;
+                                    margin-right: 1px;
+                                    cursor: pointer;
+                                }
+                            }
+                            > span {
+                                font-weight: 500;
+                                padding-left: 5px;
+                                cursor: pointer;
+                            }
                             &:hover {
-                                color: #2b4eff;
+                                > .grid-box {
+                                    > i {
+                                        transition: all 0.3s;
+                                        color: #2b4eff !important;
+                                    }
+                                }
+                                > span {
+                                    transition: all 0.3s;
+                                    color: #2b4eff !important;
+                                }
                             }
                         }
-                        > span {
-                            font-weight: 500;
-                            padding-left: 5px;
-                            cursor: pointer;
-                            transition: all 0.3s;
-                            &:hover {
-                                color: #2b4eff;
+                        > .category-submenu {
+                            position: absolute;
+                            > ul {
+                                list-style: none;
+                                margin: 0;
+                                width: 200px;
+                                padding: 17px 0 15px;
+                                background: #ffffff;
+                                box-shadow: 0 10px 20px #08002a14;
+                                border-radius: 4px;
+                                z-index: 1;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: all 0.3s;
+                                > li {
+                                    > a {
+                                        width: 100%;
+                                        padding: 0px 30px;
+                                        color: #6d6e75;
+                                        font-weight: 500;
+                                        position: relative;
+                                        text-decoration: none;
+                                        transition: all 0.3s;
+                                        &:hover {
+                                            color: #2b4eff;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
-            > .col-md-9 {
+            > .col-9 {
                 > .header-right {
                     > nav {
+                        > button {
+                            border-style: none;
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                            }
+                            > i {
+                                font-size: 30px;
+                                color: #2b4eff;
+                            }
+                        }
                         background: none !important;
                         > .navbar-collapse {
                             > .navbar-nav {
@@ -1069,6 +1124,10 @@ footer {
     header {
         position: sticky !important;
     }
+    .header-area {
+        padding: 20px 25px !important;
+    }
+
     .header-area .header-left .categories {
         display: none;
     }
@@ -1077,8 +1136,16 @@ footer {
         display: none;
     }
 
+    .header-area .header-right a {
+        display: none;
+    }
+
     .header-area .header-right .navbar {
         margin-top: 20px !important;
+        margin: 0 !important;
+        display: flex !important;
+        justify-content: end;
+        background: transparent !important;
     }
 
     #banner {
