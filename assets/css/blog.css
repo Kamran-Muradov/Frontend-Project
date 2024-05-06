@@ -33,28 +33,28 @@
   color: black !important;
 }
 .category-black > .category-text > .grid-box > i:hover {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 .category-black > .category-text > .grid-box > i:not(:hover) {
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 .category-black > .category-text > span {
   color: black !important;
 }
 .category-black > .category-text > span:hover {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 .category-black > .category-text > span:not(:hover) {
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 .category-black > .category-text:hover > .grid-box > i {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 .category-black > .category-text:hover > span {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 
@@ -89,12 +89,14 @@ header > .header-area > .row > .col-3 > .header-left > .categories > .category-t
   margin-right: 5px;
 }
 header > .header-area > .row > .col-3 > .header-left > .categories > .category-text > .grid-box > i {
+  transition: all 0.3s;
   color: white;
   font-size: 18px;
   margin-right: 1px;
   cursor: pointer;
 }
 header > .header-area > .row > .col-3 > .header-left > .categories > .category-text > span {
+  transition: all 0.3s;
   color: white;
   font-weight: 500;
   padding-left: 5px;
@@ -146,7 +148,7 @@ header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse >
   margin-left: 150px;
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .nav-link {
-  transition: border 0.4s;
+  transition: all 0.3s;
   border-bottom: 1px solid transparent;
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .nav-link > i {
@@ -186,7 +188,7 @@ header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse >
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .search-area > i {
   position: relative;
-  left: 34px;
+  left: 45px;
   cursor: pointer;
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .search-area > img {
@@ -507,8 +509,10 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
   top: 15px;
   color: black;
 }
-#blog-area .blog-sidebar > .blog-search > a > i {
+#blog-area .blog-sidebar > .blog-search > a > svg {
   vertical-align: middle;
+  width: 18px;
+  height: 18px;
 }
 #blog-area .blog-sidebar > .recent-posts-area {
   margin-bottom: 55px;
@@ -649,8 +653,8 @@ footer > .footer-top .footer-slogan {
   box-shadow: 0 30px 60px rgba(0, 4, 48, 0.3019607843);
   background-image: url("../images/cta-shape.png");
   background-repeat: no-repeat;
-  background-position-x: 48rem;
-  background-position-y: -18rem;
+  background-position-x: 46rem;
+  background-position-y: -22rem;
   position: relative;
   bottom: 5rem;
 }

@@ -41,7 +41,7 @@
             > i {
                 color: black !important;
                 &:hover {
-                    transition: color 0.3s;
+                    transition: all 0.3s;
                     color: #2b4eff !important;
                 }
                 &:not(:hover) {
@@ -52,22 +52,22 @@
         > span {
             color: black !important;
             &:hover {
-                transition: color 0.3s;
+                transition: all 0.3s;
                 color: #2b4eff !important;
             }
             &:not(:hover) {
-                transition: color 0.3s;
+                transition: all 0.3s;
             }
         }
         &:hover {
             > .grid-box {
                 > i {
-                    transition: color 0.3s;
+                    transition: all 0.3s;
                     color: #2b4eff !important;
                 }
             }
             > span {
-                transition: color 0.3s;
+                transition: all 0.3s;
                 color: #2b4eff !important;
             }
         }
@@ -105,6 +105,7 @@ header {
                             > .grid-box {
                                 margin-right: 5px;
                                 > i {
+                                    transition: all 0.3s;
                                     color: white;
                                     font-size: 18px;
                                     margin-right: 1px;
@@ -112,6 +113,7 @@ header {
                                 }
                             }
                             > span {
+                                transition: all 0.3s;
                                 color: white;
                                 font-weight: 500;
                                 padding-left: 5px;
@@ -155,13 +157,13 @@ header {
                 > .header-right {
                     > nav {
                         background: none !important;
-                        > button{
+                        > button {
                             border-style: none;
-                            &:focus{
+                            &:focus {
                                 outline: none;
                                 box-shadow: none;
                             }
-                            >i{
+                            > i {
                                 font-size: 30px;
                                 color: #2b4eff;
                             }
@@ -171,7 +173,7 @@ header {
                                 margin-left: 150px;
                                 > .nav-item {
                                     > .nav-link {
-                                        transition: border 0.4s;
+                                        transition: all 0.4s;
                                         border-bottom: 1px solid transparent;
                                         > i {
                                             font-size: 10px;
@@ -216,7 +218,7 @@ header {
                         > .search-area {
                             > i {
                                 position: relative;
-                                left: 34px;
+                                left: 45px;
                                 cursor: pointer;
                             }
                             > img {
@@ -343,6 +345,7 @@ header {
             }
         }
         .sort-area {
+            position: relative;
             > .default {
                 display: inline-block;
                 background-color: #e4e4e5;
@@ -360,6 +363,33 @@ header {
                     font-size: 12px;
                     color: #53545b;
                 }
+            }
+            > ul {
+                position: absolute;
+                top: 36px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                z-index: 1;
+                background-color: #e4e4e5;
+                border: 1px solid #53545b;
+                border-radius: 4px;
+                padding-right: 3px;
+                padding-left: 3px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 156.233px;
+                > li {
+                    padding-left: 10px;
+                    border-radius: 2px;
+                    color: #53545b;
+                    cursor: default;
+                    &:hover {
+                        background-color: #d0d0d0;
+                        color: black;
+                    }
+                }
+                // background-color:#53545b ;
             }
         }
     }
@@ -725,7 +755,7 @@ header {
         }
     }
     .cart-list-2 {
-        .course-tag  {
+        .course-tag {
             > a {
                 background-color: #0fa0dd;
             }
@@ -739,7 +769,7 @@ header {
         }
     }
     .cart-list-3 {
-        .course-tag  {
+        .course-tag {
             > a {
                 background-color: #30a820;
             }
@@ -753,7 +783,7 @@ header {
         }
     }
     .cart-list-4 {
-        .course-tag  {
+        .course-tag {
             > a {
                 background-color: #3b60ff;
             }
@@ -767,7 +797,7 @@ header {
         }
     }
     .cart-list-5 {
-        .course-tag  {
+        .course-tag {
             > a {
                 background-color: #fa7919;
             }
@@ -781,7 +811,7 @@ header {
         }
     }
     .cart-list-6 {
-        .course-tag  {
+        .course-tag {
             > a {
                 background-color: #f2277e;
             }
@@ -881,8 +911,8 @@ footer {
             box-shadow: 0 30px 60px #0004304d;
             background-image: url("../images/cta-shape.png");
             background-repeat: no-repeat;
-            background-position-x: 48rem;
-            background-position-y: -18rem;
+            background-position-x: 46rem;
+            background-position-y: -22rem;
             position: relative;
             bottom: 5rem;
 
@@ -1060,7 +1090,7 @@ footer {
         margin: 0 !important;
         padding: 20px 25px !important;
     }
-    
+
     .header-area .header-left .categories {
         display: none;
     }

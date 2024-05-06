@@ -33,28 +33,28 @@
   color: black !important;
 }
 .category-black > .category-text > .grid-box > i:hover {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 .category-black > .category-text > .grid-box > i:not(:hover) {
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 .category-black > .category-text > span {
   color: black !important;
 }
 .category-black > .category-text > span:hover {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 .category-black > .category-text > span:not(:hover) {
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 .category-black > .category-text:hover > .grid-box > i {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 .category-black > .category-text:hover > span {
-  transition: color 0.3s;
+  transition: all 0.3s;
   color: #2b4eff !important;
 }
 
@@ -89,12 +89,14 @@ header > .header-area > .row > .col-3 > .header-left > .categories > .category-t
   margin-right: 5px;
 }
 header > .header-area > .row > .col-3 > .header-left > .categories > .category-text > .grid-box > i {
+  transition: all 0.3s;
   color: white;
   font-size: 18px;
   margin-right: 1px;
   cursor: pointer;
 }
 header > .header-area > .row > .col-3 > .header-left > .categories > .category-text > span {
+  transition: all 0.3s;
   color: white;
   font-weight: 500;
   padding-left: 5px;
@@ -146,7 +148,7 @@ header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse >
   margin-left: 150px;
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .nav-link {
-  transition: border 0.4s;
+  transition: all 0.3s;
   border-bottom: 1px solid transparent;
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse > .navbar-nav > .nav-item > .nav-link > i {
@@ -186,7 +188,7 @@ header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse >
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .search-area > i {
   position: relative;
-  left: 34px;
+  left: 45px;
   cursor: pointer;
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .search-area > img {
@@ -414,10 +416,11 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
 #contact-area .contact-info > .info-area > .phone > .icon {
   margin-right: 15px;
 }
-#contact-area .contact-info > .info-area > .location > .icon > i,
-#contact-area .contact-info > .info-area > .email > .icon > i,
-#contact-area .contact-info > .info-area > .phone > .icon > i {
-  color: #2b4eff;
+#contact-area .contact-info > .info-area > .location > .icon > img,
+#contact-area .contact-info > .info-area > .email > .icon > img,
+#contact-area .contact-info > .info-area > .phone > .icon > img {
+  width: 16px;
+  height: 20px;
 }
 #contact-area .contact-info > .info-area > .location > .text > h4,
 #contact-area .contact-info > .info-area > .email > .text > h4,
@@ -545,10 +548,10 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
 #support-area .tickets-area > .icon-box:hover {
   top: -10px;
 }
-#support-area .documentation-area > .icon-box > i,
-#support-area .tickets-area > .icon-box > i {
-  color: #2b4eff;
-  font-size: 60px;
+#support-area .documentation-area > .icon-box > img,
+#support-area .tickets-area > .icon-box > img {
+  width: 70px;
+  height: 70px;
 }
 #support-area .documentation-area > .content > h3,
 #support-area .tickets-area > .content > h3 {

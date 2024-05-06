@@ -41,33 +41,33 @@
             > i {
                 color: black !important;
                 &:hover {
-                    transition: color 0.3s;
+                    transition: all 0.3s;
                     color: #2b4eff !important;
                 }
                 &:not(:hover) {
-                    transition: color 0.3s;
+                    transition: all 0.3s;
                 }
             }
         }
         > span {
             color: black !important;
             &:hover {
-                transition: color 0.3s;
+                transition: all 0.3s;
                 color: #2b4eff !important;
             }
             &:not(:hover) {
-                transition: color 0.3s;
+                transition: all 0.3s;
             }
         }
         &:hover {
             > .grid-box {
                 > i {
-                    transition: color 0.3s;
+                    transition: all 0.3s;
                     color: #2b4eff !important;
                 }
             }
             > span {
-                transition: color 0.3s;
+                transition: all 0.3s;
                 color: #2b4eff !important;
             }
         }
@@ -105,6 +105,7 @@ header {
                             > .grid-box {
                                 margin-right: 5px;
                                 > i {
+                                    transition: all 0.3s;
                                     color: white;
                                     font-size: 18px;
                                     margin-right: 1px;
@@ -112,6 +113,7 @@ header {
                                 }
                             }
                             > span {
+                                transition: all 0.3s;
                                 color: white;
                                 font-weight: 500;
                                 padding-left: 5px;
@@ -171,7 +173,7 @@ header {
                                 margin-left: 150px;
                                 > .nav-item {
                                     > .nav-link {
-                                        transition: border 0.4s;
+                                        transition: all 0.3s;
                                         border-bottom: 1px solid transparent;
                                         > i {
                                             font-size: 10px;
@@ -216,7 +218,7 @@ header {
                         > .search-area {
                             > i {
                                 position: relative;
-                                left: 34px;
+                                left: 45px;
                                 cursor: pointer;
                             }
                             > img {
@@ -455,8 +457,9 @@ header {
                 margin-bottom: 35px;
                 > .icon {
                     margin-right: 15px;
-                    > i {
-                        color: #2b4eff;
+                    > img {
+                        width: 16px;
+                        height: 20px;
                     }
                 }
                 > .text {
@@ -592,9 +595,9 @@ header {
             &:hover {
                 top: -10px;
             }
-            > i {
-                color: #2b4eff;
-                font-size: 60px;
+            > img {
+                width: 70px;
+                height: 70px;
             }
         }
         > .content {

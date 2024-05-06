@@ -14,7 +14,6 @@
 }
 
 header {
-  position: fixed;
   width: 100%;
   top: 0;
   background-color: #edeef3;
@@ -148,7 +147,7 @@ header > .header-area > .row > .col-9 > .header-right > nav > .navbar-collapse >
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .search-area > i {
   position: relative;
-  left: 34px;
+  left: 45px;
   cursor: pointer;
 }
 header > .header-area > .row > .col-9 > .header-right > nav > .search-area > img {
@@ -209,13 +208,14 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
 }
 
 #banner {
-  padding-top: 10rem;
+  padding-top: 16rem;
   background-color: #edeef3;
 }
 #banner > img:first-of-type {
   position: absolute;
   top: 25%;
   left: 7%;
+  animation: hero-circle-1 6s linear 0s infinite alternate;
 }
 #banner > img:nth-of-type(2) {
   position: absolute;
@@ -246,14 +246,28 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
 #banner > .custom-container > .row > .col-md-6:first-child > .banner-left > span {
   font-size: 60px;
 }
-#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h1 {
+#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h3 {
   font-size: 60px;
   font-weight: 700;
   position: relative;
   z-index: 1;
   line-height: 1;
 }
-#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h1 > img {
+#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h3 > span:first-of-type {
+  display: block;
+  font-weight: 300;
+  font-size: 60px;
+}
+#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h3 > span:last-of-type {
+  position: relative;
+}
+#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h3 > span:last-of-type > img {
+  position: absolute;
+  bottom: 22px;
+  left: -8px;
+  z-index: -1;
+}
+#banner > .custom-container > .row > .col-md-6:first-child > .banner-left > h3 > img {
   width: 193px;
   position: relative;
   bottom: 100px;
@@ -305,6 +319,10 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
   z-index: 2;
   bottom: 5rem;
   right: 15%;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-name: hero-bounce;
 }
 #banner > .custom-container > .row > .col-md-6:last-child > .banner-right > .slogan > p {
   font-weight: 600;
@@ -318,12 +336,15 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
   font-weight: 700;
   width: 40%;
 }
-#popular-courses > .custom-container h2 > img {
+#popular-courses > .custom-container h2 > span {
+  position: relative;
+}
+#popular-courses > .custom-container h2 > span > img {
   width: 149px;
   height: 16px;
-  position: relative;
-  left: 65px;
-  bottom: 32px;
+  position: absolute;
+  left: -14px;
+  bottom: 12px;
   z-index: -1;
 }
 #popular-courses > .custom-container .more-categories a {
@@ -340,7 +361,7 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
   border: 2px solid #eef0f6;
   transition: all 0.5s;
 }
-#popular-courses > .custom-container .course > img {
+#popular-courses > .custom-container .course > svg {
   width: 40px;
   height: 40px;
 }
@@ -357,7 +378,10 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
 #popular-courses > .custom-container .course:hover {
   background-color: #2b4eff;
   border-color: #2b4eff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: 0 20px 30px rgba(4, 23, 118, 0.3019607843);
+}
+#popular-courses > .custom-container .course:hover svg {
+  filter: brightness(0) invert(1);
 }
 #popular-courses > .custom-container .course:hover > .course-name > a,
 #popular-courses > .custom-container .course:hover > .course-name span {
@@ -422,12 +446,15 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
   font-weight: 700;
   z-index: 1;
 }
-#all-courses .course-slogan > img {
-  width: 149px;
-  height: 16px;
+#all-courses .course-slogan > h2 > span {
   position: relative;
-  left: 110px;
-  bottom: 30px;
+}
+#all-courses .course-slogan > h2 > span > img {
+  bottom: 15px;
+  width: 120%;
+  position: absolute;
+  z-index: -1;
+  right: -7px;
 }
 #all-courses .course-slogan > p {
   font-size: 16px;
@@ -802,6 +829,17 @@ header > .header-area > .row > .col-9 > .header-right > nav > a:hover {
   border-radius: 4px 4px 0;
   position: relative;
 }
+#prices .tab-body .price-2 > .best-offer > span::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid #960443;
+  border-top: 0px solid transparent;
+  border-bottom: 10px solid transparent;
+}
 #prices .tab-body .price-2 > a {
   background-color: #f3f4f8;
   border: 2px solid #d7d9e3;
@@ -823,8 +861,8 @@ footer > .footer-top .footer-slogan {
   box-shadow: 0 30px 60px rgba(0, 4, 48, 0.3019607843);
   background-image: url("../images/cta-shape.png");
   background-repeat: no-repeat;
-  background-position-x: 48rem;
-  background-position-y: -18rem;
+  background-position-x: 46rem;
+  background-position-y: -22rem;
   position: relative;
   bottom: 5rem;
 }
@@ -972,6 +1010,25 @@ footer .footer-bottom > p > a {
   color: white;
 }
 
+@keyframes hero-bounce {
+  0%, 20%, 50%, 80%, to {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes hero-circle-1 {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media only screen and (max-width: 575px) {
   .custom-container {
     padding: 0px 25px;
@@ -1013,12 +1070,11 @@ footer .footer-bottom > p > a {
   #banner .banner-left span:first-child {
     font-size: 25px !important;
   }
-  #banner .banner-left h1 {
+  #banner .banner-left h3 {
     font-size: 25px !important;
   }
-  #banner .banner-left h1 img {
+  #banner .banner-left h3 img {
     width: 75px !important;
-    position: relative !important;
     right: 81% !important;
     z-index: -1 !important;
     bottom: 0px !important;

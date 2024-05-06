@@ -75,9 +75,12 @@ window.onscroll = function () {
   changeHeaderStyle();
 };
 
-let courseTabHeaders = document.querySelectorAll("#all-courses .tab-area .tab-headers i");
-let courseTabContents = document.querySelectorAll("#all-courses .tab-body .content");
-
+let courseTabHeaders = document.querySelectorAll(
+  "#all-courses .tab-area .tab-headers i"
+);
+let courseTabContents = document.querySelectorAll(
+  "#all-courses .tab-body .content"
+);
 
 courseTabHeaders.forEach(header => {
   header.addEventListener("click", function () {
@@ -93,4 +96,17 @@ courseTabHeaders.forEach(header => {
   });
 });
 
+let selectionBtn = document.querySelector("#all-courses .sort-area .default");
+let selectionMenu = document.querySelector("#all-courses .sort-area ul");
 
+selectionBtn.addEventListener("click", e => {
+  selectionMenu.classList.toggle("d-none");
+  e.stopPropagation();
+});
+
+document.addEventListener("click", e => {
+  if (e.target.closest(".list")) {
+    return;
+  }
+  selectionMenu.classList.add("d-none");
+});
