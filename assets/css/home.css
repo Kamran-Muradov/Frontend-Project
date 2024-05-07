@@ -13,8 +13,11 @@
   visibility: visible !important;
 }
 
+.sidebar-open {
+  right: 0px !important;
+}
+
 header {
-  position: fixed;
   width: 100%;
   top: 0;
   background-color: #edeef3;
@@ -243,9 +246,141 @@ header > .header-area .header-right .submenu > li > a::before {
 header > .header-area .header-right .submenu > li:last-of-type {
   border-bottom: none;
 }
+header > .sidebar-mobile {
+  position: fixed;
+  right: -20rem;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: #ffffff none repeat scroll 0 0;
+  overflow: scroll !important;
+  box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5019607843);
+  transition: all 0.3s;
+  z-index: 99;
+}
+header > .sidebar-mobile > .sidebar-area {
+  position: relative;
+  padding: 30px;
+}
+header > .sidebar-mobile > .sidebar-area > .close {
+  position: absolute;
+  top: 25px;
+  right: 80px;
+}
+header > .sidebar-mobile > .sidebar-area > .close > button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0e1133;
+  border: 1px solid #2a3a57;
+  border-radius: 50%;
+  background-color: transparent;
+}
+header > .sidebar-mobile > .sidebar-area > .logo {
+  margin-bottom: 40px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content ul > li,
+header > .sidebar-mobile > .sidebar-area > .sidebar-content ul > li a {
+  padding: 12px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content ul > li > i {
+  float: right;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content ul > li > ul > li > a {
+  padding-left: 15px;
+  font-size: 13px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .search-box {
+  position: relative;
+  margin-top: 40px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .search-box > input {
+  width: 100%;
+  height: 60px;
+  line-height: 56px;
+  background: #f3f4f8;
+  border: 2px solid #f3f4f8;
+  border-radius: 4px;
+  padding: 25px 45px 20px 30px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .search-box > input::-moz-placeholder {
+  font-size: 14px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .search-box > input::placeholder {
+  font-size: 14px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .search-box > input:focus {
+  border-color: #2b4eff !important;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .search-box > a {
+  position: absolute;
+  font-size: 20px;
+  right: 20px;
+  top: 15px;
+  color: black;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .search-box > a > svg {
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .cart-box {
+  margin-top: 30px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .cart-box a {
+  position: relative;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .cart-box a > img {
+  width: 19px;
+  height: 18px;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .cart-box a > span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 500;
+  box-shadow: 0 10px 20px rgba(4, 23, 118, 0.3019607843);
+  background-color: #2b4eff;
+  transition: all 0.3s;
+}
+header > .sidebar-mobile > .sidebar-area > .sidebar-content > .cart-box a > span:hover {
+  background-color: #0e1133;
+}
 
 #banner {
   padding-top: 16rem;
+  padding-bottom: 120px;
   background-color: #edeef3;
 }
 #banner > img:first-of-type {
@@ -328,6 +463,7 @@ header > .header-area .header-right .submenu > li:last-of-type {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #banner .banner-right {
+  position: relative;
   max-height: 630px;
 }
 #banner .banner-right > img:first-child {
@@ -338,15 +474,16 @@ header > .header-area .header-right .submenu > li:last-of-type {
   z-index: 1;
 }
 #banner .banner-right > img:nth-of-type(2) {
-  position: relative;
-  right: 27rem;
-  top: 8rem;
+  position: absolute;
+  right: 34rem;
+  bottom: -1rem;
   animation: move-up 5s linear 0s infinite alternate;
 }
 #banner .banner-right > img:nth-of-type(3) {
-  position: relative;
-  bottom: 18rem;
-  left: 16rem;
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+  z-index: 0;
 }
 #banner .banner-right > .slogan {
   padding: 15px 25px 20px;
@@ -1135,11 +1272,10 @@ footer .footer-bottom > p > a {
   .custom-container {
     padding: 0px 25px;
   }
-  header {
-    position: sticky !important;
-  }
   .header-area {
+    margin: 0 !important;
     padding: 20px 25px !important;
+    width: 100% !important;
   }
   .header-area .header-left .categories {
     display: none;
@@ -1193,14 +1329,12 @@ footer .footer-bottom > p > a {
   #banner .banner-right img:first-of-type {
     margin-top: 11% !important;
   }
-  #banner .banner-right .slogan {
-    bottom: -20rem !important;
-  }
   #popular-courses .section-head {
     display: block !important;
   }
   #popular-courses .section-head h2 {
     width: 100% !important;
+    font-size: 33px !important;
   }
   #popular-courses .section-head h2 img {
     left: 70px !important;
@@ -1208,11 +1342,20 @@ footer .footer-bottom > p > a {
   #popular-courses .online-course img {
     display: none;
   }
+  #all-courses .course-slogan h2 {
+    font-size: 33px;
+  }
   #all-courses .tab-headers ul {
     display: block;
   }
+  #events .event-title h2 {
+    font-size: 33px;
+  }
   #events .events-area .event {
     display: block !important;
+  }
+  #prices .prices-title h2 {
+    font-size: 33px;
   }
   #prices .tab-body {
     padding: 0;

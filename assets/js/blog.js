@@ -6,14 +6,43 @@ let navHeaderList = document.querySelectorAll(
 );
 let mobileNavBtn = document.querySelector(".header-right .navbar button i");
 let categoryElem = document.querySelector(".categories");
-let categorySubmenu = document.querySelector(
-  ".categories .category-submenu"
-);
+let categorySubmenu = document.querySelector(".categories .category-submenu");
 let headerLogo = document.querySelector(".header-left img");
 let navSubmenus = document.querySelectorAll(".submenu");
 let headerElem = document.querySelector("header");
 let sticky = headerElem.offsetTop;
 let searchInput = document.querySelector(".search-area input");
+let sidebar = document.querySelector("header .sidebar-mobile");
+let sidebarOpenBtn = document.querySelector(
+  "header .header-right .navbar button"
+);
+let sidebarCloseBtn = document.querySelector(
+  "header .sidebar-mobile .close button"
+);
+let sidebarMenus = document.querySelectorAll(
+  "header .sidebar-mobile .sidebar-content .menu"
+);
+let sidebarSubmenus = document.querySelectorAll(
+  "header .sidebar-mobile .sidebar-content .mob-submenu"
+);
+
+sidebarOpenBtn.addEventListener("click", function () {
+  sidebar.classList.add("sidebar-open");
+});
+
+sidebarCloseBtn.addEventListener("click", function () {
+  sidebar.classList.remove("sidebar-open");
+});
+
+sidebarMenus.forEach(menu => {
+  menu.addEventListener("click", function () {
+    for (const item of sidebarSubmenus) {
+      if (item.getAttribute("data-id") == menu.getAttribute("data-id")) {
+        item.classList.toggle("d-none");
+      }
+    }
+  });
+});
 
 function changeHeaderStyle() {
   if (window.scrollY > sticky) {
